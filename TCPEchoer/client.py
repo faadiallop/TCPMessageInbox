@@ -1,6 +1,6 @@
 #Created: 09/14/2023
 #Creator: Faa Diallo
-#Simple client to connect the TCP server.
+#Simple client to connect the TCP server and send a message to it.
 import socket
 
 HOST = "127.0.0.1"
@@ -12,5 +12,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.sendall(msg)
     data = s.recv(1024)
 
-print(f"Received {data!r}")
+print(f"Received \"{data.decode('utf-8')}\"")
 
