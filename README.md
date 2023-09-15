@@ -1,2 +1,2 @@
 # TCPMessageInbox
-A simple message inbox using TPC
+>This simple TCP service receives a message and echoes that message back the client.
